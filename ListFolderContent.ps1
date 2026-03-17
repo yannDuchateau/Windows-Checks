@@ -1,0 +1,2 @@
+﻿get-childitem c:\Temp -rec | where {!$_.PSIsContainer} | select-object FullName, LastWriteTime, Length | export-csv -notypeinformation -delimiter '|' -path c:\Temp\Dateiliste.csv
+Invoke-Item c:\Temp\Dateiliste.csv
